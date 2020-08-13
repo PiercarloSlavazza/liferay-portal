@@ -1,0 +1,12 @@
+--- a/build.xml	2020-08-13 15:42:49.837734907 +0200
++++ b/build_java8.xml	2020-08-13 17:14:23.895265013 +0200
+@@ -156,6 +156,9 @@
+     <condition property="target.rt.version" value="JAVASE6">
+       <contains string="${java.version}" substring="1.6." />
+     </condition>
++    <condition property="target.rt.version" value="JAVASE8">
++      <contains string="${java.version}" substring="1.8." />
++    </condition>
+ 
+     <fail message="Failed to detect Java runtime library version used for building ICU4J"
+           unless="target.rt.version" />
